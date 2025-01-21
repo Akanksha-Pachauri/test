@@ -1,0 +1,21 @@
+{
+  "name": "Python Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "docker-in-docker": "latest"
+  },
+  "postCreateCommand": "pip install -r app/requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
